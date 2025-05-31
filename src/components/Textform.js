@@ -57,15 +57,15 @@ function Textform(props) {
     <div className="container" style={{color: props.mode==='dark'?'white':'#042743'}}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
-        <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'gray':'white', color: props.mode==='dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
+        <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#47496a':'white', color: props.mode==='dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-2" onClick={handleDownClick}>Convert to Lowercase</button>
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear</button>
-        <button className="btn btn-primary mx-2" onClick={handleReverseClick}>Reverse words</button>
-        <button className="btn btn-primary mx-2" onClick={handleCapitaliseClick}>Capitalise words</button>
-        <button className="btn btn-primary mx-2" onClick={handlecopy}>copy text</button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove extra space</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleDownClick}>Convert to Lowercase</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleReverseClick}>Reverse words</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleCapitaliseClick}>Capitalise words</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handlecopy}>copy text</button>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove extra space</button>
     </div>
 
     <div className="container my-4" style={{color: props.mode==='dark'?'white':'#042743'}}>
@@ -80,3 +80,4 @@ function Textform(props) {
 }
 
 export default Textform
+
