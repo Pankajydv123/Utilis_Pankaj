@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Utilis_Pankaj/static/css/main.65b1a2f2.css",
-    "main.js": "/Utilis_Pankaj/static/js/main.ed094779.js",
-    "static/js/453.ed3810f9.chunk.js": "/Utilis_Pankaj/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/Utilis_Pankaj/index.html",
-    "main.65b1a2f2.css.map": "/Utilis_Pankaj/static/css/main.65b1a2f2.css.map",
-    "main.ed094779.js.map": "/Utilis_Pankaj/static/js/main.ed094779.js.map",
-    "453.ed3810f9.chunk.js.map": "/Utilis_Pankaj/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/Pankaj_Utilis/static/css/main.65b1a2f2.css",
+    "main.js": "/Pankaj_Utilis/static/js/main.ff95ff75.js",
+    "static/js/453.ed3810f9.chunk.js": "/Pankaj_Utilis/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/Pankaj_Utilis/index.html",
+    "main.65b1a2f2.css.map": "/Pankaj_Utilis/static/css/main.65b1a2f2.css.map",
+    "main.ff95ff75.js.map": "/Pankaj_Utilis/static/js/main.ff95ff75.js.map",
+    "453.ed3810f9.chunk.js.map": "/Pankaj_Utilis/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65b1a2f2.css",
-    "static/js/main.ed094779.js"
+    "static/js/main.ff95ff75.js"
   ]
 }
