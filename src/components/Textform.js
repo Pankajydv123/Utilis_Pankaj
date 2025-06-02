@@ -15,9 +15,7 @@ function Textform(props) {
     }
 
     const handlecopy= ()=>{
-        var text = document.getElementById("myBox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Textform copied to clipboard", "success");
     }
 
@@ -59,19 +57,19 @@ function Textform(props) {
         <div className="mb-3">
         <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#47496a':'white', color: props.mode==='dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleDownClick}>Convert to Lowercase</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleReverseClick}>Reverse words</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleCapitaliseClick}>Capitalise words</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handlecopy}>copy text</button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove extra space</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleDownClick}>Convert to Lowercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleReverseClick}>Reverse words</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCapitaliseClick}>Capitalise words</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handlecopy}>copy text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove extra space</button>
     </div>
 
     <div className="container my-4" style={{color: props.mode==='dark'?'white':'#042743'}}>
       <h1>Your text summary</h1>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
-      <p>{0.008 * text.split(" ").length} minutes read</p>
+      <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+      <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} minutes read</p>
       <h2>Preview</h2>
       <p>{text.length>0?text:"Enter some text in textarea to preview here......"}</p>
     </div>
